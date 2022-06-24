@@ -1,38 +1,69 @@
 .App {
-  text-align: center;
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size:25px
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  margin: 0;
+  padding:0;
+  
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.titleSection{
+  background-color:#5AB3F7 ;
+  width: 100%;
+  height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* justify-content: center; */
   color: white;
+  color: transparent;
+  
 }
-
-.App-link {
-  color: #61dafb;
+.titleSection h1{
+  background-image:linear-gradient(45deg,#845ec2,#d65db1,#ff6f91,#ff9671,#ffc75f,#f9f871);
+  background-clip: text;
+  background-size: 400%;
+  background-position: left;
+  animation: bg-animation 10s linear infinite alternate;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes bg-animation{
+  0%{
+    background-position: left;
   }
-  to {
-    transform: rotate(360deg);
+  100%{
+    background-position: right;
   }
+}
+.titleSection input{
+  width: 200px;
+  height: 30px;
+  border-radius: 10px;
+  border:1px solid #5AB3F7;
+  font-size:15px;
+}
+.titleSection button{
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #026dbf;
+  color: white;
+  border:none;
+  font-size:18px;
+  margin: 10px;
+}
+.titleSection button:hover{
+    cursor:pointer;
+    border: 1px solid white;
+}
+.displaySection{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+}
+.displaySection h2, h5 {
+  margin: 0px;
+}
+.displaySection img{
+  margin: -12px;
+  width: 150px;
 }
